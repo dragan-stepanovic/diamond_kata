@@ -15,13 +15,13 @@ public class Diamond {
 
   public static String forLetter(String widestLetter) {
     String diamond = rowFor(widestLetter);
-    for (String letter : inReverseStartingFrom(widestLetter)) {
+    for (String letter : lettersInReverseStartingFrom(widestLetter)) {
       diamond = rowFor(letter, widestLetter) + diamond + rowFor(letter, widestLetter);
     }
     return removeLastNewLineFrom(diamond);
   }
 
-  private static List<String> inReverseStartingFrom(String widestLetter) {
+  private static List<String> lettersInReverseStartingFrom(String widestLetter) {
     List<String> reversedLetters = listUntil(widestLetter);
     Collections.reverse(reversedLetters);
     return reversedLetters;
