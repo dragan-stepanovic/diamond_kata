@@ -13,7 +13,7 @@ public class Diamond {
   private static final String SPACE = " ";
   private static final List<String> letters = Arrays.asList("A", "B", "C", "D");
 
-  public static String print(String widestLetter) {
+  public static String forLetter(String widestLetter) {
     String diamond = rowFor(widestLetter);
     for (String letter : reverseUntil(widestLetter)) {
       diamond = rowFor(letter, widestLetter) + diamond + rowFor(letter, widestLetter);
